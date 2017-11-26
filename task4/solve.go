@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"unicode"
+	"strings"
 )
 
 func RemoveEven(InputSlice []int) (OutputSlice []int) {
@@ -51,5 +51,5 @@ func main() {
 	fmt.Println(gen()) // Должно напечатать 8
 	fmt.Println(DifferentWordsCount("Hello, world!HELLO  wOrlD...12"))
 	// Должно напечатать 2
-}
-*/
+}*/s
+
