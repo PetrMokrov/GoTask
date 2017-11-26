@@ -13,7 +13,7 @@ func RemoveEven(InputSlice []int) (OutputSlice []int) {
 	return
 }
 
-func PowerGenerator(Power int) (func() int) {
+func PowerGenerator(Power int) func() int {
 	currentPower := 1
 	initialPower := Power
 	return func() int {
@@ -35,6 +35,10 @@ func DifferentWordsCount(Str string) (resCount int) {
 			}
 			currentStr = ""
 		}
+	}
+	_, ok := usingStrings[currentStr]
+	if !ok && currentStr != "" {
+		usingStrings[currentStr] = true
 	}
 	resCount = len(usingStrings)
 	return
