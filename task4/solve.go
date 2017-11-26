@@ -1,8 +1,9 @@
 package main
 
 import (
-	"unicode"
+	"fmt"
 	"strings"
+	"unicode"
 )
 
 func RemoveEven(InputSlice []int) (OutputSlice []int) {
@@ -23,7 +24,7 @@ func PowerGenerator(Power int) func() int {
 	}
 }
 
-func DifferentWordsCount(Str string) int {
+func DifferentWordsCount(Str string) (resCount int) {
 	usingStrings := make(map[string]bool)
 	var currentStr string
 	for _, valRune := range Str {
@@ -37,19 +38,6 @@ func DifferentWordsCount(Str string) int {
 			currentStr = ""
 		}
 	}
-	//fmt.Println(usingStrings)
-	return len(usingStrings)
+	resCount = len(usingStrings)
+	return
 }
-/*
-func main() {
-	input := []int{0, 3, 2, 5}
-	result := RemoveEven(input)
-	fmt.Println(result) // Должно напечататься [3 5]
-	gen := PowerGenerator(2)
-	fmt.Println(gen()) // Должно напечатать 2
-	fmt.Println(gen()) // Должно напечатать 4
-	fmt.Println(gen()) // Должно напечатать 8
-	fmt.Println(DifferentWordsCount("Hello, world!HELLO  wOrlD...12"))
-	// Должно напечатать 2
-}*/s
-
