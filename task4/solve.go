@@ -15,7 +15,7 @@ func RemoveEven(InputSlice []int) (OutputSlice []int) {
 	return
 }
 
-func PowerGenerator(Power int) func() int {
+func PowerGenerator(Power int) (func() int) {
 	currentPower := 1
 	initialPower := Power
 	return func() int {
